@@ -1,4 +1,6 @@
-    html,body{
+
+
+html,body{
       margin:0;
       padding: 0;
       width: 100%;
@@ -19,11 +21,44 @@
    position: absolute;
    background: rgba(0,0,0,0.56);
    z-index: 99;
-   width: 80%;
-   height: 80%;
-   left: 10%;
-   top: 10%;
+  /* width: 80%;
+   height: 80%;*/
+   left: 50%;
+   top: 50%;
+   transform: translate(-50%,-50%);
+
  }
+
+@keyframes moveleft{
+  0%{transform:translateX(-30px);
+  }
+  100%{transform:translateX(30px;);}
+}
+
+@keyframes moveright{
+  0%{transform: translate(30px);
+  }
+  100%{
+    tranform:translate(-30px;);
+  }
+}
+
+@keyframes turnaround{
+  0%{transform: rotate(0deg)
+  }
+  100%{transform:rotate(360deg);}
+}
+
+.company,.title,.erweima{
+  animation: moveleft 500ms ease;
+}
+.name,.info,.address{
+  animation: moveright 500ms ease;
+}
+
+.photo{
+  animation: turnaround 700ms ease;
+}
 
  .logo p,.erwema,.address p{
   text-align: center;
@@ -60,6 +95,7 @@
 .footer{
   position: fixed;
   bottom: 0;
+  left: 0;
   width: 100%;
 }
 .footer .share,.footer .ido{

@@ -86,11 +86,15 @@ a{
   text-align: center;
  }
 
+p{
+  line-height: 0.5rem;
+}
 .info {
   margin-left: 12%;
 }
 
 .info p{
+  margin-top: 1rem;
   margin:0.2rem;
   display: inline-block;
 }
@@ -99,7 +103,7 @@ a{
 }
 
 .photo{
-  margin:0 auto;
+  margin:1rem auto;
   background: url(cat.png) no-repeat;
   width: 80px;
   height: 80px;
@@ -114,10 +118,14 @@ a{
 
 .erweima{
   margin: 0 auto;
+  margin-top:1rem;
   background: url(ererima.png) no-repeat;
   background-size:80px 80px; 
   width: 80px;
   height: 80px;
+}
+.address{
+  margin-top: 0.8rem;
 }
 .footer{
   position: fixed;

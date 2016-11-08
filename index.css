@@ -1,5 +1,5 @@
 
-
+/*reset*/
 html,body{
       margin:0;
       padding: 0;
@@ -7,6 +7,14 @@ html,body{
       height: 100%;
       font-size: 20px;
     }
+input{
+   border:0px;
+   background: none;
+}
+a{
+  text-decoration: none;
+}
+
 .container{
       position: relative;
       background: url('11.png') no-repeat ;
@@ -60,13 +68,31 @@ html,body{
   animation: turnaround 700ms ease;
 }
 
+/*.company input,.name input,.title input{
+ display: block;
+ margin:0 auto;
+ color: #fff;
+ text-align: center;
+ font-size: 0.75rem;
+ line-height: 1.2rem;
+}
+
+.info input{
+ display: inline;
+ color: #fff;
+}
+*/
  .logo p,.erwema,.address p{
   text-align: center;
-
  }
 
 .info {
   margin-left: 12%;
+}
+
+.info p{
+  margin:0.2rem;
+  display: inline-block;
 }
 .info li i{
   margin-right: 5px;
@@ -78,6 +104,7 @@ html,body{
   width: 80px;
   height: 80px;
   background-size: 80px 80px;
+  /*border:dotted 1px #fff;*/
   border-radius: 50%;
   overflow: hidden;
 }
@@ -102,12 +129,11 @@ html,body{
  background: rgba(0,0,0,0.56);
  float: left;
  width: 50%;
- height: 40px;
+ /*height: 40px;*/
  border-style: none;
 }
 
 .footer .share a,.footer .ido a{
-  text-decoration: none;
   color: #fff;
   font-family: "微软雅黑";
   font-size: 0.75rem;
@@ -115,7 +141,7 @@ html,body{
 }
 .icon-mobile,.icon-mail-envelope-closed,.icon-bubbles4{
   display: inline-block;
-  margin-top: 5px;
+
   width: 1rem;
   height: 1rem;
   border-radius: 50%;
@@ -127,8 +153,8 @@ html,body{
 .icon-phone{
   display: inline-block;
   margin-left: 0.5rem;
-  width: 0.8rem;
-  height: 0.8rem;
+  width: 0.9rem;
+  height: 0.9rem;
   background: green;
   border-radius: 20%;
   vertical-align: middle;

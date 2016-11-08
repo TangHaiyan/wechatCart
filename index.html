@@ -1,44 +1,61 @@
 <!DOCTYPE html>
 <html>
-<head>
+  <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
-	<title>微信card</title>
-  <link rel="stylesheet" type="text/css" href="style.css">
-  <link rel="stylesheet" type="text/css" href="index.css">
-  <style type="text/css">
-
-  </style>
-</head>
-<body>
-  <div class="container">
-  	<div class="layer" >
-     <div class="content" style="display:none">
-    		<div class="logo">
-    			<div class="company"><p>阿里巴巴</p></div>
-    			<div class="photo"></div>
-    			<div class="name"><p>唐海燕</p></div>
-    			<div class="title"><p>前端工程师</p></div>
-    		</div>
-    		<div class="info">
-    			<ul>
-    				<li class="tel"><i class="icon-mobile"></i>13896165414 <i class="icon-phone"></i></li>
-    				<li class="email"><i class="icon-mail-envelope-closed"></i>thy@163.com</li>
-    				<li class="wechat"><i class="icon-bubbles4"></i>ttwhy007</li>
-    			</ul>
-    		</div>
-    		<div class="erweima"></div>
-    		<div class="address"><p>重庆沙坪坝杨公桥</p></div>
-    	</div>
-    </div>
-    
-     <div class="footer">
+    <title>微信card</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <style type="text/css">
+    .photo-container,.erweima-container{
+      position: relative;
+    }
+    .photo-container input,.erweima-container input{
+      position: absolute;
+      width: 80px;
+      height: 80px;
+      left: 50%;
+      transform:translateX(-50%);
+      top: 0;
+      opacity: 0;
+      filter: alpha(opacity=0); 
+    }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="layer" >
+        <form class="content" style="display:none">
+          <div class="logo">
+            <div class="company"><p contenteditable="true">请填写公司名称</p></div>
+            <div class="photo-container">
+              <div class="photo"></div>
+              <input type="file" name="photo" id="photo" >
+            </div>
+            <div class="name"><p contenteditable="true">请填写姓名</p></div>
+            <div class="title"><p contenteditable="true">请填写职位</p></div>
+          </div>
+          <div class="info">
+            <ul>
+              <li class="tel"><i class="icon-mobile"></i><p contenteditable="true">电话号码</p> <i class="icon-phone"></i></li>
+              <li class="email"><i class="icon-mail-envelope-closed"></i><p contenteditable="true">邮箱地址</p></li>
+              <li class="wechat"><i class="icon-bubbles4"></i><p contenteditable="true">微信账号</p>
+            </ul>
+          </div>
+          <div class="erweima-container">
+            <div class="erweima"></div>
+            <input type="file" name="photo" id="erweima" 
+            >
+          </div>
+          <div class="address"><p contenteditable="true">公司地址</p></div>
+        </form>
+      </div>
+      <footer class="footer" style="display:none">
         <button class="share"><a href="">分享给朋友</a>  </button>
         <button class="ido"><a href=""> 我也做一个</a></button>
+      </footer>
     </div>
-  </div>
-  <script type="text/javascript" src="jquery.js"></script>
-  <script type="text/javascript" src="index.js"></script>
-
-</body>
+    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript" src="index.js"></script>
+  </body>
 </html>

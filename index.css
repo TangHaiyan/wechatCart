@@ -1,72 +1,94 @@
-
+@charset "UTF-8";
 /*reset*/
-html,body{
-      margin:0;
-      padding: 0;
-      width: 100%;
-      height: 100%;
-      font-size: 20px;
-    }
-input{
-   border:0px;
-   background: none;
-}
-a{
-  text-decoration: none;
-}
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  font-size: 20px; }
 
-.container{
-      position: relative;
-      background: url('11.png') no-repeat ;
-      background-size:100% 100%; 
-      height: 100%;
-      width: 100%;
-      color: #fff;
-      font-family: "微软雅黑";
-      font-size: 0.75rem;
-    }
- .layer{
-   position: absolute;
-   background: rgba(0,0,0,0.56);
-   z-index: 99;
+input {
+  border: 0px;
+  background: none; }
+
+a {
+  text-decoration: none; }
+
+@keyframes moveleft {
+  0% {
+    -webkit-transform: translate(-16%, 0);
+    -moz-transform: translate(-16%, 0);
+    -ms-transform: translate(-16%, 0);
+    -o-transform: translate(-16%, 0);
+    transform: translate(-16%, 0); }
+  100% {
+    -webkit-transform: translate(16%, 0);
+    -moz-transform: translate(16%, 0);
+    -ms-transform: translate(16%, 0);
+    -o-transform: translate(16%, 0);
+    transform: translate(16%, 0); } }
+@keyframes moveright {
+  0% {
+    -webkit-transform: translate(16%, 0);
+    -moz-transform: translate(16%, 0);
+    -ms-transform: translate(16%, 0);
+    -o-transform: translate(16%, 0);
+    transform: translate(16%, 0); }
+  100% {
+    -webkit-transform: translate(-16%, 0);
+    -moz-transform: translate(-16%, 0);
+    -ms-transform: translate(-16%, 0);
+    -o-transform: translate(-16%, 0);
+    transform: translate(-16%, 0); } }
+@keyframes turnaround {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  100% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg); } }
+.company, .title, .erweima {
+  animation: moveleft 500ms ease; }
+
+.name, .info, .address {
+  animation: moveright 500ms ease; }
+
+.photo {
+  animation: turnaround 700ms ease; }
+
+.container {
+  position: relative;
+  background: url("11.png") no-repeat;
+  background-size: 100% 100%;
+  height: 100%;
+  width: 100%;
+  color: #fff;
+  font-family: "微软雅黑";
+  font-size: 0.75rem; }
+
+.layer {
+  position: absolute;
+  background: rgba(0, 0, 0, 0.56);
+  z-index: 99;
   /* width: 80%;
    height: 80%;*/
-   left: 50%;
-   top: 45%;
-   transform: translate(-50%,-50%);
+  left: 50%;
+  top: 45%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%); }
 
- }
-
-@keyframes moveleft{
-  0%{transform:translateX(-30px);
-  }
-  100%{transform:translateX(30px;);}
-}
-
-@keyframes moveright{
-  0%{transform: translate(30px);
-  }
-  100%{
-    tranform:translate(-30px;);
-  }
-}
-
-@keyframes turnaround{
-  0%{transform: rotate(0deg)
-  }
-  100%{transform:rotate(360deg);}
-}
-
-.company,.title,.erweima{
-  animation: moveleft 500ms ease;
-}
-.name,.info,.address{
-  animation: moveright 500ms ease;
-}
-
-.photo{
-  animation: turnaround 700ms ease;
-}
+.content {
+  width: 100%;
+  height: 100%; }
 
 /*.company input,.name input,.title input{
  display: block;
@@ -82,83 +104,107 @@ a{
  color: #fff;
 }
 */
- .logo p,.erwema,.address p{
-  text-align: center;
- }
+.logo p, .erwema, .erweima-container, .address p {
+  text-align: center; }
 
-p{
-  line-height: 0.5rem;
-}
+.company p {
+  margin: 0.5rem auto;
+  line-height: 1.4rem; }
+
+.info p, .title p, .name p {
+  line-height: 0.8rem; }
+
+.title p, .name p {
+  margin: 0.4rem auto; }
+
 .info {
-  margin-left: 12%;
-}
+  margin-left: 12%; }
 
-.info p{
-  margin-top: 1rem;
-  margin:0.2rem;
-  display: inline-block;
-}
-.info li i{
-  margin-right: 5px;
-}
+.info p {
+  margin: 0.2rem;
+  display: inline-block; }
 
-.photo{
-  margin:1rem auto;
+.info li i {
+  margin-right: 0.25rem; }
+
+.photo {
+  margin: 0.5rem auto;
   background: url(cat.png) no-repeat;
-  width: 80px;
-  height: 80px;
-  background-size: 80px 80px;
   /*border:dotted 1px #fff;*/
   border-radius: 50%;
-  overflow: hidden;
-}
-.info ul{
-  list-style: none;
-}
+  overflow: hidden; }
 
-.erweima{
+.info ul {
+  list-style: none; }
+
+.photo-container, .erweima-container {
+  position: relative; }
+
+.photo-container input, .erweima-container input {
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0);
+  -moz-transform: translate(-50%, 0);
+  -ms-transform: translate(-50%, 0);
+  -o-transform: translate(-50%, 0);
+  transform: translate(-50%, 0);
+  top: 0;
+  opacity: 0;
+  filter: alpha(opacity=0); }
+
+.erweima {
   margin: 0 auto;
-  margin-top:1rem;
-  background: url(ererima.png) no-repeat;
-  background-size:80px 80px; 
+  margin-top: 1rem;
+  background: url(ererima.png) no-repeat; }
+
+.photo, .erweima, .photo-container input, .erweima-container input {
   width: 80px;
-  height: 80px;
-}
-.address{
-  margin-top: 0.8rem;
-}
-.footer{
+  height: 80px; }
+
+.photo, .erweima {
+  background-size: 80px 80px; }
+
+@media screen and (max-width: 360px) {
+  .photo, .erweima, .photo-container input, .erweima-container input {
+    width: 60px;
+    height: 60px; }
+
+  .photo, .erweima {
+    background-size: 60px 60px; }
+
+  font-size: 23px; }
+.address {
+  margin-top: 0.8rem; }
+
+.footer {
   position: fixed;
   bottom: 0;
   left: 0;
-  width: 100%;
-}
-.footer .share,.footer .ido{
- background: rgba(0,0,0,0.56);
- float: left;
- width: 50%;
- /*height: 40px;*/
- border-style: none;
-}
+  width: 100%; }
 
-.footer .share a,.footer .ido a{
+.footer .share, .footer .ido {
+  background: rgba(0, 0, 0, 0.56);
+  float: left;
+  width: 50%;
+  /*height: 40px;*/
+  border-style: none; }
+
+.footer .share a, .footer .ido a {
   color: #fff;
   font-family: "微软雅黑";
   font-size: 0.75rem;
-  line-height: 1.5rem;
-}
-.icon-mobile,.icon-mail-envelope-closed,.icon-bubbles4{
-  display: inline-block;
+  line-height: 1.5rem; }
 
+.icon-mobile, .icon-mail-envelope-closed, .icon-bubbles4 {
+  display: inline-block;
   width: 1rem;
   height: 1rem;
   border-radius: 50%;
-  border:1px solid #fff;
+  border: 1px solid #fff;
   vertical-align: middle;
-  text-align: center;
+  text-align: center; }
 
-}
-.icon-phone{
+.icon-phone {
   display: inline-block;
   margin-left: 0.5rem;
   width: 0.9rem;
@@ -166,5 +212,6 @@ p{
   background: green;
   border-radius: 20%;
   vertical-align: middle;
-  text-align: center;
-}
+  text-align: center; }
+
+/*# sourceMappingURL=index.css.map */

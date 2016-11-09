@@ -125,19 +125,23 @@ a{
 
 .photo{
   margin:0.5rem auto;
-  background: url(cat.png) no-repeat;
+  // background: url(cat.png) no-repeat;
   /*border:dotted 1px #fff;*/
-  border-radius: 50%;
+
+}
+.photo img{
+    border-radius: 50%;
   overflow: hidden;
 }
 .info ul{
   list-style: none;
 }
 
-.photo-container,.erweima-container{
+.photo,.erweima{
   position: relative;
+
 }
-.photo-container input,.erweima-container input{
+.photo input,.erweima input{
   position: absolute;
   left: 50%;
   @include transform-translate(-50%,0);
@@ -147,26 +151,23 @@ a{
 
 .erweima{
   margin: 0 auto;
-  margin-top:1rem;
-  background: url(ererima.png) no-repeat;
+  margin-top:0.8rem;
+  // background: url(ererima.png) no-repeat;
 }
 
-.photo,.erweima,.photo-container input,.erweima-container input{
+.photo,.erweima,.photo img,.erweima img,.photo input,.erweima input{
   @include imageSize(80px,80px);
 
 }
-.photo,.erweima{
-  background-size:80px 80px; 
-}
 
 @media screen and (max-width:360px){
-    .photo,.erweima,.photo-container input,.erweima-container input{
+    .photo img,.erweima img,.photo input,.erweima input{
     @include imageSize(60px,60px);
 
   }
-  .photo,.erweima{
-    background-size:60px 60px;  
-  }
+  // .photo img,.erweima img{
+  //   background-size:60px 60px;  
+  // }
   @include fontSize(23px);
 }
 

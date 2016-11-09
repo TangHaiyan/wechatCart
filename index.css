@@ -129,18 +129,19 @@ a {
 
 .photo {
   margin: 0.5rem auto;
-  background: url(cat.png) no-repeat;
-  /*border:dotted 1px #fff;*/
+  /*border:dotted 1px #fff;*/ }
+
+.photo img {
   border-radius: 50%;
   overflow: hidden; }
 
 .info ul {
   list-style: none; }
 
-.photo-container, .erweima-container {
+.photo, .erweima {
   position: relative; }
 
-.photo-container input, .erweima-container input {
+.photo input, .erweima input {
   position: absolute;
   left: 50%;
   -webkit-transform: translate(-50%, 0);
@@ -154,23 +155,16 @@ a {
 
 .erweima {
   margin: 0 auto;
-  margin-top: 1rem;
-  background: url(ererima.png) no-repeat; }
+  margin-top: 0.8rem; }
 
-.photo, .erweima, .photo-container input, .erweima-container input {
+.photo, .erweima, .photo img, .erweima img, .photo input, .erweima input {
   width: 80px;
   height: 80px; }
 
-.photo, .erweima {
-  background-size: 80px 80px; }
-
 @media screen and (max-width: 360px) {
-  .photo, .erweima, .photo-container input, .erweima-container input {
+  .photo img, .erweima img, .photo input, .erweima input {
     width: 60px;
     height: 60px; }
-
-  .photo, .erweima {
-    background-size: 60px 60px; }
 
   font-size: 23px; }
 .address {

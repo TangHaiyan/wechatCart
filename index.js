@@ -7,15 +7,43 @@ $(function(){
    		$('.content').css("display","block");
    		$('.footer').slideDown("slow");
    	});
-
+   //给输入元素添加事件
    $("p").focus(function(e){
    	//$(this).
    	e.preventDefault();
    	$(this).css("outline","none");
 
    })
+  //给上传图片接口添加事件
+  $('#photo').change(function(){
+  	var img = document.getElementById('selectPhoto');
+    onloadImg(this,img);
+  })
 
+  $('#erweima').change(function(){
+  	var img = document.getElementById('selectErweima');
+    onloadImg(this,img);
+  })
 
+  function onloadImg(eventObj,desObj){
+  	 if(typeof FileReader =='undefined'){
+	    $(".layer").css({'background':'none'})
+	    .html('亲,请更新浏览器获得最好体验');
+	 }
+  	 //要用js对象 兼容到ie10,11
+  	 var img = eventObj.files[0];
+  	 var src = window.URL.createObjectURL(img);
+  	 console.log(window.URL);
+  	 desObj.src = src;
+  }
+
+$('.share').click(function(){
+	alert("shared");
+})
+
+$('.ido').click(function(){
+	alert("我也做一个");
+})
 
 
 })

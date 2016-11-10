@@ -123,14 +123,9 @@ a{
   margin-right: 0.25rem;
 }
 
-.photo{
-  margin:0.5rem auto;
-  // background: url(cat.png) no-repeat;
-  /*border:dotted 1px #fff;*/
 
-}
 .photo img{
-    border-radius: 50%;
+  border-radius: 50%;
   overflow: hidden;
 }
 .info ul{
@@ -139,6 +134,7 @@ a{
 
 .photo,.erweima{
   position: relative;
+  margin:0.5rem auto;
 
 }
 .photo input,.erweima input{
@@ -149,11 +145,7 @@ a{
   @include opacity(0);
 }
 
-.erweima{
-  margin: 0 auto;
-  margin-top:0.8rem;
-  // background: url(ererima.png) no-repeat;
-}
+
 
 .photo,.erweima,.photo img,.erweima img,.photo input,.erweima input{
   @include imageSize(80px,80px);
@@ -180,6 +172,7 @@ a{
   bottom: 0;
   left: 0;
   width: 100%;
+  margin-bottom:-1px;
 }
 .footer .share,.footer .ido{
  background: rgba(0,0,0,0.56);

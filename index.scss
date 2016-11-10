@@ -42,14 +42,15 @@ a{
 }
 
 .company,.title,.erweima{
-  animation: moveleft 500ms ease;
+  @include animation(moveleft 500ms ease);
 }
 .name,.info,.address{
-  animation: moveright 500ms ease;
+  @include animation(moveright 500ms ease);
 }
 
 .photo{
-  animation: turnaround 700ms ease;
+  @include animation(turnaround 700ms ease);
+  @include transform-origin(50% 50%);
 }
 
 .container{
@@ -169,10 +170,9 @@ a{
 }
 .footer{
   position: fixed;
-  bottom: 0;
+  bottom: -1px;
   left: 0;
   width: 100%;
-  margin-bottom:-1px;
 }
 .footer .share,.footer .ido{
  background: rgba(0,0,0,0.56);

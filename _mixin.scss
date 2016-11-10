@@ -40,3 +40,8 @@
     -o-transform:rotate($deg);
     transform:rotate($deg);
 }
+
+@mixin animation($animation){
+    animation:($animation);
+    -webkit-animation:($animation)
+}

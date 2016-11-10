@@ -42,7 +42,7 @@ $('.share').click(function(){
 })
 
 $('.ido').click(function(){
-	alert("我也做一个");
+	alert("我也做一个1.0");
 })
 
 

@@ -112,7 +112,7 @@ a {
  color: #fff;
 }
 */
-.logo p, .erwema, .erweima-container, .address p {
+.logo p, .erwema, .address p {
   text-align: center; }
 
 .company p {
@@ -163,7 +163,7 @@ a {
   height: 80px; }
 
 @media screen and (max-width: 360px) {
-  .photo img, .erweima img, .photo input, .erweima input {
+  .photo, .erweima, .photo img, .erweima img, .photo input, .erweima input {
     width: 60px;
     height: 60px; }
 

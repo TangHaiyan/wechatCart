@@ -108,7 +108,7 @@ a{
 .info p,.title p,.name p{
   line-height:0.8rem;
 }
-.title p,.name p{
+.title p,.name p,.address p{
   margin:0.4rem auto;
 }
 
@@ -138,6 +138,7 @@ a{
   margin:0.5rem auto;
 
 }
+
 .photo input,.erweima input{
   position: absolute;
   left: 50%;
@@ -166,13 +167,16 @@ a{
 
 
 .address{
-  margin-top: 0.8rem;
+  margin: 0.5rem auto;
 }
 .footer{
   position: fixed;
-  bottom: -1px;
+  bottom: 0;
   left: 0;
   width: 100%;
+}
+.footer button{
+  padding:0;
 }
 .footer .share,.footer .ido{
  background: rgba(0,0,0,0.56);

@@ -7,12 +7,19 @@ html, body {
   height: 100%;
   font-size: 20px; }
 
+@media screen and (min-width: 768px) {
+  html, body {
+    margin: 0 auto;
+    width: 768px; } }
 input {
   border: 0px;
   background: none; }
 
 a {
   text-decoration: none; }
+
+ul {
+  list-style: none; }
 
 @keyframes moveleft {
   0% {
@@ -70,6 +77,15 @@ a {
   -o-transform-origin: 50% 50%;
   transform-origin: 50% 50%; }
 
+.name, .info li, .footer .share a, .footer .ido a {
+  font-size: 0.8rem; }
+
+.company {
+  font-size: 0.65rem; }
+
+.title, .address {
+  font-size: 0.6rem; }
+
 .container {
   position: relative;
   background: url("11.png") no-repeat;
@@ -77,8 +93,7 @@ a {
   height: 100%;
   width: 100%;
   color: #fff;
-  font-family: "微软雅黑";
-  font-size: 0.75rem; }
+  font-family: "微软雅黑"; }
 
 .layer {
   position: absolute;
@@ -98,53 +113,26 @@ a {
   width: 100%;
   height: 100%; }
 
-/*.company input,.name input,.title input{
- display: block;
- margin:0 auto;
- color: #fff;
- text-align: center;
- font-size: 0.75rem;
- line-height: 1.2rem;
-}
-
-.info input{
- display: inline;
- color: #fff;
-}
-*/
-.logo p, .erwema, .address p {
-  text-align: center; }
-
-.company p {
-  margin: 0.5rem auto;
-  line-height: 1.4rem; }
-
-.info p, .title p, .name p {
-  line-height: 0.8rem; }
-
-.title p, .name p, .address p {
-  margin: 0.4rem auto; }
-
-.info {
-  margin-left: 12%; }
+.info ul {
+  display: table;
+  margin: 0 auto;
+  padding-left: 0; }
 
 .info p {
-  margin: 0.2rem;
   display: inline-block; }
 
 .info li i {
   margin-right: 0.25rem; }
 
+.logo p, .erwema, .address p {
+  text-align: center; }
+
 .photo img {
   border-radius: 50%;
   overflow: hidden; }
 
-.info ul {
-  list-style: none; }
-
 .photo, .erweima {
-  position: relative;
-  margin: 0.5rem auto; }
+  position: relative; }
 
 .photo input, .erweima input {
   position: absolute;
@@ -168,9 +156,42 @@ a {
     height: 60px; }
 
   font-size: 23px; }
-.address {
+.company, .logo, .info, .erweima, .address, .photo {
   margin: 0.5rem auto; }
 
+.info p, .title p, .name p {
+  line-height: 0.6rem; }
+
+.title p, .name p, .address p {
+  margin: 0.4rem auto; }
+
+.info p {
+  margin: 0.2rem; }
+
+.company p {
+  line-height: 1.2rem; }
+
+@media screen and (min-width: 400px) {
+  .photo, .erweima, .photo img, .erweima img, .photo input, .erweima input {
+    width: 120px;
+    height: 120px; }
+
+  .company, .logo, .info, .erweima, .address, .photo {
+    margin: 0.75rem auto; }
+
+  .info p, .title p, .name p {
+    line-height: 0.9rem; }
+
+  .title p, .name p, .address p {
+    margin: 0.6rem auto; }
+
+  .info p {
+    margin: 0.3rem; }
+
+  .company p {
+    line-height: 1.8rem; }
+
+  font-size: 25px; }
 .footer {
   position: fixed;
   bottom: 0;
@@ -184,32 +205,29 @@ a {
   background: rgba(0, 0, 0, 0.56);
   float: left;
   width: 50%;
-  /*height: 40px;*/
   border-style: none; }
 
 .footer .share a, .footer .ido a {
   color: #fff;
   font-family: "微软雅黑";
-  font-size: 0.75rem;
   line-height: 1.5rem; }
 
-.icon-mobile, .icon-mail-envelope-closed, .icon-bubbles4 {
+.icon-mobile, .icon-mail-envelope-closed, .icon-bubbles4, .icon-phone {
   display: inline-block;
-  width: 1rem;
-  height: 1rem;
-  border-radius: 50%;
-  border: 1px solid #fff;
   vertical-align: middle;
   text-align: center; }
 
+.icon-mobile, .icon-mail-envelope-closed, .icon-bubbles4 {
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  border: 1px solid #fff; }
+
 .icon-phone {
-  display: inline-block;
   margin-left: 0.5rem;
   width: 0.9rem;
   height: 0.9rem;
   background: green;
-  border-radius: 20%;
-  vertical-align: middle;
-  text-align: center; }
+  border-radius: 20%; }
 
 /*# sourceMappingURL=index.css.map */

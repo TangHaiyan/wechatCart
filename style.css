@@ -31,11 +31,13 @@
 .icon-phone:before {
   content: "\e942";
   font-size: 0.6rem;
+  color: #fff;
 }
 .icon-mobile:before {
 
   content: "\e958";
     font-size: 0.6rem;
+
 }
 .icon-bubbles4:before {
   content: "\e970";

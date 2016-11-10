@@ -37,14 +37,28 @@ $(function(){
   	 desObj.src = src;
   }
 
-$('.share').click(function(){
-	alert("shared");
-})
+	$('.share').click(function(e){
+		alert("shared");
+		e.preventDefault();
+	})
 
-$('.ido').click(function(){
-	alert("我也做一个1.0");
-})
+	$('.ido').click(function(e){
+		alert("我也做一个1.0");
+		e.preventDefault();
+	})
 
+	//拨打号码
+	$('.tel a').click(function(e){
+		var tel = $('.tel p').text();
+		var telNum = parseInt(tel);
+
+		if (isNaN(tel)) {
+			e.preventDefault();
+		}else{
+			$(this).attr("href","tel:"+telNum);
+			console.log("T"+tel);
+	    }
+	 })
 
 })
 

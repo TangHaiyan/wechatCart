@@ -120,25 +120,6 @@ ul{
   height: 100%;
 }
 
-//range
-
-// .company,.logo,.info,.erweima,.address,.photo{
-//   margin: 0.5rem auto;
-// }
-// .info p,.title p,.name p{
-//   line-height:0.8rem;
-// }
-
-// .title p,.name p,.address p{
-//   margin:0.4rem auto;
-// }
-// .info p{
-//   margin:0.2rem;
-// }
-
-// .company p{
-//   line-height: 1.4rem;
-// }
 
 
 .info ul{
@@ -244,4 +225,19 @@ ul{
   height: 0.9rem;
   background: green;
   border-radius: 20%;
+}
+
+.shareLayer{
+    position: fixed;
+    font-size: 0.65rem;
+    background: rgba(0, 0, 0,0.7);
+    z-index: 999;
+    width: 100%;
+    height: 100%;
+}
+
+.shareLayer p{
+    position:absolute;
+    right:80px;
+    top:20px;
 }

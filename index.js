@@ -38,12 +38,15 @@ $(function(){
   }
 
 	$('.share').click(function(e){
-		alert("shared");
+		$('.shareLayer').show();
 		e.preventDefault();
 	})
+  $('.shareLayer').click(function(){
+    $(this).hide();
+  })
 
 	$('.ido').click(function(e){
-		alert("我也做一个1.0");
+		alert("我也做一个2.0");
 		e.preventDefault();
 	})
 
